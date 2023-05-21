@@ -21,7 +21,7 @@ public:
 
         // Add the list to the frame for it to be drawn
         frame->setContent(list);
-        
+
         // Return the frame to have it become the top level element of this Gui
         return frame;
     }
@@ -32,8 +32,8 @@ public:
     }
 
     // Called once every frame to handle inputs not handled by other UI elements
-    virtual bool handleInput(u64 keysDown, u64 keysHeld, touchPosition touchInput, JoystickPosition leftJoyStick, JoystickPosition rightJoyStick) override {
-        return false;   // Return true here to singal the inputs have been consumed
+    virtual bool handleInput(u64 keysDown, u64 keysHeld, const HidTouchState &touchPos, HidAnalogStickState joyStickPosLeft, HidAnalogStickState joyStickPosRight) override {
+        return false;   // Return true here to signal the inputs have been consumed
     }
 };
 
